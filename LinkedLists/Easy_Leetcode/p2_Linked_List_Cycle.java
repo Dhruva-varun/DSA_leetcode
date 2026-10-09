@@ -25,6 +25,9 @@ public class p2_Linked_List_Cycle {
         return false;
 
         //Using HashSet to track visited nodes. - O(n) Time and O(n) Space
+        // -> HashSet does not allow duplicate elements.
+        // -> As we traverse the linked list, we add each node to the HashSet.
+        // -> If we encounter a node that is already in the HashSet, add method will return false, indicating that a cycle exists.
 
         // HashSet<Node> visited = new HashSet<>();
 
@@ -53,3 +56,4 @@ public class p2_Linked_List_Cycle {
         System.out.println(hasCycle(head));
     }
 }
+

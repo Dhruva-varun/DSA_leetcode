@@ -6,42 +6,49 @@ public class Q2_Linked_List_Cycle {
 
     public static boolean hasCycle(Node head) {
 
-        //Using Floyd's Cycle Detection Algorithm (Tortoise and Hare) - O(n) Time and O(1) Space
+        // Using Floyd's Cycle Detection Algorithm (Tortoise and Hare) - O(n) Time and
+        // O(1) Space
         // Step 1: Presence of the cycle:
         // -> Take two pointers $slow and $fast.
         // -> Both of them will point to head of the linked list initially.
-        // -> $slow will move one step at a time. $fast will move two steps at a time. (twice as speed as $slow$ pointer).
-        // -> Check if at any point they point to the same node before any one(or both) reach null.
-        // -> If they point to the same node at any point of their journey, it indicates that a cycle indeed exists in the linked list.
+        // -> $slow will move one step at a time. $fast will move two steps at a time.
+        // (twice as speed as $slow$ pointer).
+        // -> Check if at any point they point to the same node before any one(or both)
+        // reach null.
+        // -> If they point to the same node at any point of their journey, it indicates
+        // that a cycle indeed exists in the linked list.
         // -> If we get null, it indicates that the linked list has no cycle.
 
         Node slow = head, fast = head;
 
-        while(fast!=null && fast.next!=null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow==fast) return true;
+            if (slow == fast)
+                return true;
         }
         return false;
 
-        //Using HashSet to track visited nodes. - O(n) Time and O(n) Space
+        // Using HashSet to track visited nodes. - O(n) Time and O(n) Space
         // -> HashSet does not allow duplicate elements.
         // -> As we traverse the linked list, we add each node to the HashSet.
-        // -> If we encounter a node that is already in the HashSet, add method will return false, indicating that a cycle exists.
+        // -> If we encounter a node that is already in the HashSet, add method will
+        // return false, indicating that a cycle exists.
 
-        // HashSet<Node> visited = new HashSet<>();
-
-        // while(head!=null){
-            
-        //     if(!visited.add(head)){
-        //         return true;
-        //     }
-        //     head = head.next;
-        // }
-        // return false;
+        /*
+         * HashSet<Node> visited = new HashSet<>();
+         * 
+         * while(head!=null){
+         * 
+         * if(!visited.add(head)){
+         * return true;
+         * }
+         * head = head.next;
+         * }
+         * return false;
+         */
 
     }
-
 
     public static void main(String[] args) {
         Node head = new Node(1);
@@ -56,4 +63,3 @@ public class Q2_Linked_List_Cycle {
         System.out.println(hasCycle(head));
     }
 }
-

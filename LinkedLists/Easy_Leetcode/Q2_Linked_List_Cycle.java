@@ -2,7 +2,7 @@ package Easy_Leetcode;
 
 import java.util.HashSet;
 
-public class p2_Linked_List_Cycle {
+public class Q2_Linked_List_Cycle {
 
     public static boolean hasCycle(Node head) {
 

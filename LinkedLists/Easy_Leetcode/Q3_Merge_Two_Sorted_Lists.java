@@ -1,6 +1,6 @@
 package Easy_Leetcode;
 
-public class p3_Merge_Two_Sorted_Lists {
+public class Q3_Merge_Two_Sorted_Lists {
     
     public static Node mergeTwoLists(Node list1, Node list2) {
 

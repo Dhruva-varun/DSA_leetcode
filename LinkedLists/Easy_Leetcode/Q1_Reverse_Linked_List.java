@@ -1,6 +1,6 @@
 package Easy_Leetcode;
 
-public class p1_Reverse_Linked_List {
+public class Q1_Reverse_Linked_List {
 
     public static Node reverseList(Node head) {
 

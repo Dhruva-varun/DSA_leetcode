@@ -2,6 +2,8 @@ package Easy_Leetcode;
 
 import java.util.HashSet;
 
+// https://www.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1
+
 public class Q6_Remove_Duplicates_from_Linked_List {
 
     public static Node removeDuplicatesUnsorted(Node head) {
